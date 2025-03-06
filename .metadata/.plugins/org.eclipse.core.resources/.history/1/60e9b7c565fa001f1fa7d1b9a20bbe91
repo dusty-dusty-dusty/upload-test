@@ -1,0 +1,22 @@
+package ch11_api;
+
+/*Math클래스(자바의정석 참고)
+ -수학계산에 유용한 메서드로 구성
+ 
+  
+ */
+
+
+
+public class MathEx {
+	public static void main(String[]args) {
+		System.out.println("Math.PI="+Math.PI);
+		//Math.ceil() 올림
+		System.out.println(Math.ceil(0.60));
+		System.out.println(Math.ceil(0.40));
+		System.out.println(Math.ceil(5));
+		System.out.println(Math.ceil(5.1));
+		System.out.println(Math.ceil(-5.1));
+		System.out.println(Math.ceil(-5.9));
+	}
+}

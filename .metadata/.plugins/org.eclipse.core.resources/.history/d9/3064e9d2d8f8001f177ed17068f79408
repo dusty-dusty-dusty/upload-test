@@ -1,0 +1,11 @@
+package ch03;
+
+public class ScannerEx01 {
+
+	public static void main(String[] args) {
+		//타입 변수명[=초기값];
+		클래명 변수명 = new 타입();
+
+	}
+
+}

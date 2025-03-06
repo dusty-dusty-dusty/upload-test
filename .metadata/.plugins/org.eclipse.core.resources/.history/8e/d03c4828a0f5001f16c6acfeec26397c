@@ -1,0 +1,15 @@
+package ch02;
+
+//character(51p)
+public class Ex06_51p {
+
+	public static void main(String[] args) {
+		char c1 = 'a';
+		System.out.println("char c1="+c1);
+		char c2 = 'A';
+		System.out.println("char c2="+c2);
+		char c3 = '1';
+		System.out.println("char c3="+c3);
+	}
+
+}

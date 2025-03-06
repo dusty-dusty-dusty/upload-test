@@ -1,0 +1,20 @@
+package ch03;
+
+//반복문 -for,while,do while
+/*for문 111p
+for(초기화; 조건식; 증감식){
+//반복실행코드
+}
+ */
+	public class ForEx01_p111 {
+		
+		public static void main(String[] args) {
+			//1 2 3 4 5
+			for(int i=1; i<=5; i++){
+				//반복실행코드
+				System.out.println(i);
+			}//for
+
+		}
+		
+}

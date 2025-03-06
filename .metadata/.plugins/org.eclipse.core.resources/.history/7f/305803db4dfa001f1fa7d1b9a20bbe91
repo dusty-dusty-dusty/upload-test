@@ -1,0 +1,42 @@
+package ch07_array;
+
+//배열의 복사p218 
+/*깊은 복사(Deep Copy)    : 값복사
+* 	=>예> System.arraycopy()
+*
+*/
+public class ArrayCopy2 {
+
+	public static void main(String[] args) {
+		int[] originArr = new int[]{11,12,13};
+		//얕은 복사(Shallow Copy) : 주소복사
+		int[] arr2 = originArr;
+		
+		System.out.println("originArr="+originArr); //[I@3d012ddd
+		System.out.println("arr2"+arr2);            //arr2[I@626b2d4a
+		
+//		System.out.println("-원본originArr------------");
+//		for(int temp:originArr) {
+//			System.out.printf("%4d",temp);
+//		}
+		
+		//깊은 복사(deep copy) : 값 복사 clone()		
+		int[] deepCopyArr1 = originArr.clone();
+		System.out.println("deepCopyArr1="+deepCopyArr1);
+		System.out.println("deepCopyArr1="+deepCopyArr1);
+		//--------------------------------
+		
+		originArr[0]=11111;
+		System.out.println("-\n\nArr------------");
+		for(int temp:originArr) {
+			System.out.printf("%4d",temp);
+		}
+		
+		System.out.println("\n\n-arr2------------");
+		for(int temp:arr2) {
+			System.out.printf("%4d",temp);
+		}
+	}
+}
+
+

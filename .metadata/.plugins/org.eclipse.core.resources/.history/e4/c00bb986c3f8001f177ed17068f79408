@@ -1,0 +1,23 @@
+package ch03;
+
+//반복문-for(p111),while(p108), do while(p110)
+/*for문(p111)
+for(초기화; 조건식; 증감식){
+	//반복실행코드
+}while 조건식
+
+while(조건식){
+	//반복실행코드
+}
+*/
+
+
+public class BreakcontinueEx01_p117 {
+
+	public static void main(String[] args) {
+		for(; ; ++a) {
+			
+		}
+	}
+
+}

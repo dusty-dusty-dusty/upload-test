@@ -1,0 +1,29 @@
+package ch07_array;
+
+//배열의 복사p218
+/*깊은 복사(Deep copy)
+ *얕은 복사(Shallow copy)
+ */
+public class ArrayCopy_218 {
+	
+	
+	public static void main(String[]args) {
+		int[] originArr = new int[] {1,2,3};
+		
+		int[] arr2 = new int[10];
+		System.out.println("-원본originArr--------------------");
+		for(int temp:originArr) {
+			System.out.printf("%4d",temp);
+		}
+//		originArr[3]=100;
+//		originArr[4]=400;
+		
+		
+		System.arraycopy(originArr, 0, arr2, 1, 1);
+		System.out.println("\n\n-array카피후의 arr2--------------------");
+		for(int temp:arr2) {
+			System.out.printf("%4d",temp);
+		}
+	}
+	
+}

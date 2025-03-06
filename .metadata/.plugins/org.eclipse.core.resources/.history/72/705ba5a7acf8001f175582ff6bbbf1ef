@@ -1,0 +1,14 @@
+package ch03;
+
+public class WhileEX01_p108 {
+
+	public static void main(String[] args) {
+		//1 2 3 4 5
+		int i=1;
+		for(int i=5; i<=; i++) {
+			System.out.println();
+		}
+		
+	}
+
+}

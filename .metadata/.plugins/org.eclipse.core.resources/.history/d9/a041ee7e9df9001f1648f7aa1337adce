@@ -1,0 +1,23 @@
+package ch07_array;
+/*배열의 선언
+타입[] 배열명;
+타입   배열명[];
+
+int[] scores;
+int   scores[];
+배열생성
+배열명 = new 타입[크기];
+
+인덱스(index) - 0부터 1씩 증가
+배열명[idx]   =>  배열의 idx에 위치한 값을 가져오기(get)
+배열명[idx]=값 =>  배열의 idx에 위치한 값을 설정하기(set)
+*/
+
+public class Ex03 {
+	
+	public static void main(String[] args) {
+		char[] arr1  = new char[3];
+		for(char i=0;i<names.length;i++) {
+			System.out.println(i+"번째값:"+names[i]);
+	}
+}

@@ -1,0 +1,48 @@
+package ch02;
+
+/*증감연산자(p73) ++, --
+▶ 증가연산자(++) : 피연산자의 값을 1 증가시킨다.
+▶ 감소연산자(--) : 피연산자의 값을 1 감소시킨다.
+
+*전위형
+	예) j = ++i;
+	값이 참조되기 전에 증가시킨다
+	
+*후위형
+	예) j = i++;
+	값이 참조된 후에 증가시킨다.
+*/
+public class IncreaseDecrease_p73 {
+	public static void main(String[] args) {
+		int x = 10;
+		int y = 10;
+		int z;
+		
+		System.out.println("-----------------------");
+		x++;
+		++x;
+		System.out.println("x=" + x);	//?	
+
+		System.out.println("-----------------------");		
+		y--;
+		--y;
+		System.out.println("y=" + y);	//	
+
+		System.out.println("-----------------------");		
+		z = x++;
+		System.out.println("z=" + z);	//
+		System.out.println("x=" + x);	//
+		
+		System.out.println("-----------------------");		
+		z = ++x;
+		System.out.println("z=" + z);	//
+		System.out.println("x=" + x);	//
+		
+		System.out.println("-----------------------");				
+		z = ++x + y++;
+		System.out.println("z=" + z);	//
+		System.out.println("x=" + x);	//
+		System.out.println("y=" + y);	//
+	}
+}
+

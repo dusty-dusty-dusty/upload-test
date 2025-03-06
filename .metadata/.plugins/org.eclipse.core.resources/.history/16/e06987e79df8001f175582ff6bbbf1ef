@@ -1,0 +1,47 @@
+package ch03;
+
+/*Switch문 98P
+switch(조건){
+	case 값1 : 값 1과 일치할 경우 실행코드
+			[break;]
+    case 값1 : 값 1과 일치할 경우 실행코드
+			[break;]
+			
+	~~~~~~~~~~~~~~~~
+	
+	case 값1 : 값 1과 일치할 경우 실행코드
+			[break;]
+	default : 위의 모든 조건 충족하지 않을 경우 실행코드
+	 		[break;]
+}
+ */
+
+/*byte(1)<short(2)<int(4,기본)<long(8)
+float(4)<double(8,기본)
+
+byte(1)<char(2),short(2)<int(4,기본)<float(4)<long(8)<double(8,기본)
+실수는 정수보다 크다.
+*/
+
+
+public class Ex03_p98 {
+
+	public static void main(String[] args) {
+		int month = 0;
+				
+		switch(조건){
+		case 값1 : //값 1과 일치할 경우 실행코드
+				[break;]
+	    case 값2 : //값 2과 일치할 경우 실행코드
+				[break;]
+				
+		~~~~~~~~~~~~~~~~
+		
+		case 값N : //값 N과 일치할 경우 실행코드
+				[break;]
+		default : 위의 모든 조건 충족하지 않을 경우 실행코드
+		 		[break;]
+		
+	}
+
+}
