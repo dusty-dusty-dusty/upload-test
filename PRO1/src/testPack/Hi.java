@@ -19,9 +19,12 @@ public class Hi {
 		System.out.println("짱재밋는 " + psGames[5]); //배열에서 게임 꺼내기
 		System.out.println("CD 랙 크기"+psGames.length);
 		
-		for (int i=0; i<=5; i++) {
-			System.out.println("CD 보관함"+i+"번 슬롯"+psGames[i]);
-			} 
+//		for (int i=0; i<=5; i++) {
+//			System.out.println("CD 보관함"+i+"번 슬롯"+psGames[i]);
+//			} 
+		for(int i=0; i<=5; i++) {
+			System.out.println("dd+i");
 		}
 	
+	}
 }
