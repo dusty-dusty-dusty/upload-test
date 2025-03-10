@@ -13,13 +13,6 @@ public class Car01{
 		String company= "현대"; //제조사;
 		String kind="세단";//종류
 		Date manufacturingDate=new Date(); // 연식
-		@Override
-		public String toString() {
-			return "Car01 [company=" + company + ", kind=" + kind + ", manufacturingDate=" + manufacturingDate
-					+ ", weight=" + weight + ", cylinder=" + cylinder + ", max_speed=" + max_speed + ", speed=" + speed
-					+ ", grade=" + grade + ", fuelEfficiency=" + fuelEfficiency + ", submerged=" + submerged
-					+ ", engine=" + engine + ", tire=" + tire + "]";
-		}
 
 		int	weight=1; //중량
 		int	cylinder=1000; //배기량
@@ -49,5 +42,15 @@ public class Car01{
 		void showInfo() {
 			System.out.println("company="+company+", 연식(제조일자)="+manufacturingDate+", grade="+grade);
 		}
-	
+		
+		
+//		//@ annotation => 1.공지 2.검사
+//		@Override
+//		public String toString() {
+//			return "Car01 [company=" + company + ", kind=" + kind + ", manufacturingDate=" + manufacturingDate
+//					+ ", weight=" + weight + ", cylinder=" + cylinder + ", max_speed=" + max_speed + ", speed=" + speed
+//					+ ", grade=" + grade + ", fuelEfficiency=" + fuelEfficiency + ", submerged=" + submerged
+//					+ ", engine=" + engine + ", tire=" + tire + "]";
+//		}
+
 }

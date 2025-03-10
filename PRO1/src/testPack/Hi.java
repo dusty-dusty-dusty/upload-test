@@ -25,6 +25,16 @@ public class Hi {
 		for(int i=0; i<=5; i++) {
 			System.out.println("dd+i");
 		}
-	
+		
+		
+		for(int d=0; d<=5; d++) {
+			System.out.println(d);
+		}
+		
+		for(int q=1; q>=10; q++) {
+			System.out.println(q);
+		}
+		
+		
 	}
 }
