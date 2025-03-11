@@ -1,6 +1,7 @@
 package ch05;
 
 //이 클래스는 Person01클래스의 실행클래스이다.
+
 public class Person01_main {
 
 	public static void main(String[] args) {
