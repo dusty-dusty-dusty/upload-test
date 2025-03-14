@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="toString"/>
+		<item key="selection" value="파일 객체"/>
 		<list key="findhistory">
+			<item value="파일 객체"/>
 			<item value="toString"/>
 			<item value="intergerPattern"/>
 		</list>
