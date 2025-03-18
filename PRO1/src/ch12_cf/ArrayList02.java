@@ -8,7 +8,7 @@ public class ArrayList02 {
 	public static void main(String[] args) {
 		//ArrayList객체생성
 		//   클래스 참조변수 = new 클래스명()
-		ArrayList<Member01> list = new ArrayList<Member01>(); 
+		ArrayList<Member01>  list = new ArrayList<Member01>(); 
 		System.out.println("list="+list); //[]
 		
 		//Member01을 add(Object)
@@ -18,6 +18,7 @@ public class ArrayList02 {
 		list.add(new Member01(3,"김9",40));
 		list.add(new Member01(4,"유관순",15));
 		list.add(new Member01(5,"현빈",60));
+		list.add(new Member01(6,"현빈",60));
 //		list.add(true); //boolean->Boolean
 //		list.add('A');  //char	 ->Character
 
@@ -57,7 +58,13 @@ public class ArrayList02 {
 		for(Object o : list) {
 			System.out.println(o);
 		}
-
+		
+		System.out.println("\n-향상된 for문이용하여 모든 요소Member01꺼내기------------------");
+		for(Member01 o : list) {
+		System.out.println(o.getAge());
+		}
+		
+		
 	}
 
 }
