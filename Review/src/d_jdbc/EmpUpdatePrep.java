@@ -13,7 +13,7 @@ import java.sql.*;
  		-ResultSet excuteQuery()  : SELECT
  */
 
-public class EmpInsertPrep {
+public class EmpUpdatePrep {
 	
 	//0. JDBC 필요한 변수 선언
 	static String driver ="oracle.jdbc.driver.OracleDriver";
@@ -33,21 +33,28 @@ public class EmpInsertPrep {
 			con = DriverManager.getConnection(url, user, pass);
 			
 			//3. sql 문장
-			int 	sabun 	= 1112;
-			String 	samyung 	= "테스트";
-			int 	wolgub 	= 4500;
+			int 	sabun 	= 7900;
+			String 	samyung = "아무개";
+			int 	wolgub 	= 4000;
 			String 	upmu 	= "IT";
 			
-			String sql = "INSERT "
-					+ " INTO emp(empno, ename, sal, job) "
-					+ " VALUES(?,?,?,?)";
+			String sql = //"7900 사원의 정보를 위의 변수값으로 변경"
+					
+						" UPDATE EMP "
+					+ " SET ename=?, sal=?, job=?"
+					+ " WHERE empno= ?";
+					
+//					"INSERT "
+//					+ " INTO emp(empno, ename, sal, job) "
+//					+ " VALUES(?,?,?,?)";
 			
 			//4. 전송객체 
 			ps = con.prepareStatement(sql);
-			ps.setInt( 1, sabun);
-			ps.setString( 2, samyung);
-			ps.setInt( 3, wolgub);
-			ps.setString( 4, upmu);
+			//sql문장의 ? 지정
+			ps.setString( 1, samyung);
+			ps.setInt( 2, wolgub);
+			ps.setString( 3, upmu);
+			ps.setInt( 4, sabun);
 			
 			//5. 전송
 			int result = ps.executeUpdate();

@@ -13,7 +13,7 @@ import java.sql.*;
  		-ResultSet excuteQuery()  : SELECT
  */
 
-public class EmpInsertPrep {
+public class EmpSelectCount {
 	
 	//0. JDBC 필요한 변수 선언
 	static String driver ="oracle.jdbc.driver.OracleDriver";
@@ -24,7 +24,6 @@ public class EmpInsertPrep {
 	public static void main(String[] args) {
 		
 		Connection con = null;
-		PreparedStatement ps =null;
 		try {
 			//1. 드라이버 로딩
 			Class.forName(driver);
@@ -33,37 +32,37 @@ public class EmpInsertPrep {
 			con = DriverManager.getConnection(url, user, pass);
 			
 			//3. sql 문장
-			int 	sabun 	= 1112;
-			String 	samyung 	= "테스트";
-			int 	wolgub 	= 4500;
-			String 	upmu 	= "IT";
-			
-			String sql = "INSERT "
-					+ " INTO emp(empno, ename, sal, job) "
-					+ " VALUES(?,?,?,?)";
+			String sql = "SELECT count(*) cnt FROM emp";
 			
 			//4. 전송객체 
-			ps = con.prepareStatement(sql);
-			ps.setInt( 1, sabun);
-			ps.setString( 2, samyung);
-			ps.setInt( 3, wolgub);
-			ps.setString( 4, upmu);
+			PreparedStatement ps = con.prepareStatement(sql);
 			
 			//5. 전송
-			int result = ps.executeUpdate();
-			System.out.println(result+"행을 수행하였습니다.");
+			ResultSet rs = ps.executeQuery();
+			
 			
 			//[6. 결과 받아처리]
+			//############################
+			rs.next();
+			int cnt = rs.getInt("CNT");
+			System.out.println(cnt+"명의 사원이 있습니다.");
+			
+			
+//			while(rs.next()) {
+//				System.out.print(	rs.getInt("EMPNO")		+"/");
+//				System.out.print(	rs.getString("ENAME")	+"/");
+//				System.out.print(	rs.getInt("SAL")		+"/");
+//				System.out.print(	rs.getString("JOB")		+"/");
+//				System.out.println(	rs.getString("HIREDATE"));
+//			}
+			
 			
 		}catch(Exception ex) {
 			System.out.println("실패"+ex.getMessage());
 			ex.printStackTrace();
 		}finally {
 			//7닫기
-			try {
-				ps.close();
-				con.close();
-				} catch(Exception ex) {} 
+			try {con.close();} catch(Exception ex) {} 
 		}
 		
 		

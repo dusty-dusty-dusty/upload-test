@@ -1,26 +1,24 @@
-package d_jdbc;
+package e_dept;
 
 import java.sql.*;
-
 /*
-  	@ 전송객체 
- 		- Statement				 : SQL 문장이 완벽한 경우
- 		- PreparedStatement (***): SQL 문장이 미완성
- 		- CallableStatement		 : 데이타베이스함수(function/proc)호출때
- 		
- 	@ 전송
- 		-int excuteUpdate() : INSERT, DELETE, UPDATE
- 		-ResultSet excuteQuery()  : SELECT
- */
+	부서번호: 50
+	부서명:	개발
+	부서위치 :	강남
+	
+	50번정보를 부서테이블에 입력하기
 
-public class EmpInsertPrep {
+*/
+
+
+public class DeptUpdate {
 	
 	//0. JDBC 필요한 변수 선언
 	static String driver ="oracle.jdbc.driver.OracleDriver";
 	static String url    ="jdbc:oracle:thin:@127.0.0.87:1521:xe";
 	static String user   ="scott";
 	static String pass   ="tiger";
-	
+
 	public static void main(String[] args) {
 		
 		Connection con = null;
@@ -32,26 +30,26 @@ public class EmpInsertPrep {
 			//2. 연결객체
 			con = DriverManager.getConnection(url, user, pass);
 			
-			//3. sql 문장
-			int 	sabun 	= 1112;
-			String 	samyung 	= "테스트";
-			int 	wolgub 	= 4500;
-			String 	upmu 	= "IT";
+			//3. SQL 문장
 			
-			String sql = "INSERT "
-					+ " INTO emp(empno, ename, sal, job) "
-					+ " VALUES(?,?,?,?)";
+			int dno = 50;
+			String dname = "개발";
+			String loc ="강남";
 			
+			String sql =
+						"UPDATE DEPT"
+					+ " SET dname=?, loc=? "
+					+ " WHERE DEPTNO= ? ";			
 			//4. 전송객체 
 			ps = con.prepareStatement(sql);
-			ps.setInt( 1, sabun);
-			ps.setString( 2, samyung);
-			ps.setInt( 3, wolgub);
-			ps.setString( 4, upmu);
+			//sql문장의 ? 지정
+			ps.setString( 1, dname);
+			ps.setString( 2, loc);
+			ps.setInt(3, dno);
 			
 			//5. 전송
 			int result = ps.executeUpdate();
-			System.out.println(result+"행을 수행하였습니다.");
+			System.out.println(result+"행을 수행하였습니다. 내가 또 이겼다 ㅅㅅ");
 			
 			//[6. 결과 받아처리]
 			
