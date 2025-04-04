@@ -30,13 +30,22 @@ public class EmpAndDept {
 				/*
 				 * [해당 사원의 정보를 검색]
 				 */
-				int buseo = 20;
-				String sql = "SELECT * FROM emp WHERE DEPTNO=?";
+				//int buseo = 20;
+				String sql = "SELECT d.dname dname   "
+			               + "         ,e.empno empno   "
+			               + "         ,e.ename ename   "
+			               + "         ,e.job job      "
+			               + "         ,e.sal sal      "
+			               + "         ,e.hiredate hiredate"
+			               + " FROM  emp e INNER JOIN dept d "
+			               + " ON    e.DEPTNO = d.DEPTNO "
+			               + " WHERE d.dname = 'RESEARCH' ";
+						
 				//String sql = "SELECT WHERE sabun=7900";
 				
 				//4. 전송객체 
 				PreparedStatement ps = con.prepareStatement(sql);
-				ps.setInt(1, buseo);
+				//ps.setInt(1, buseo);
 				
 				//5. 전송
 				ResultSet rs = ps.executeQuery();

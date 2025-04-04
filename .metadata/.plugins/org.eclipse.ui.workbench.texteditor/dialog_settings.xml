@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="ps.set"/>
+		<item key="selection" value="EmpModelImpl"/>
 		<list key="findhistory">
+			<item value="EmpModelImpl"/>
+			<item value="while"/>
 			<item value="ps.set"/>
 			<item value="파일 객체"/>
 			<item value="toString"/>
