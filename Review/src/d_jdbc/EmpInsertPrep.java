@@ -33,7 +33,7 @@ public class EmpInsertPrep {
 			con = DriverManager.getConnection(url, user, pass);
 			
 			//3. sql 문장
-			int 	sabun 	= 1112;
+			int 	sabun 	= 1312;
 			String 	samyung 	= "테스트";
 			int 	wolgub 	= 4500;
 			String 	upmu 	= "IT";
@@ -50,8 +50,9 @@ public class EmpInsertPrep {
 			ps.setString( 4, upmu);
 			
 			//5. 전송
-			int result = ps.executeUpdate();
-			System.out.println(result+"행을 수행하였습니다.");
+			//5. 전송
+			int result = ps.executeUpdate(); // INSERT문은 이 메서드를 사용해야 함
+			System.out.println(result + "행을 수행하였습니다.");
 			
 			//[6. 결과 받아처리]
 			

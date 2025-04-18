@@ -62,7 +62,7 @@ public class EmpSelectByPk {
 		}finally {
 			//7닫기
 			try {con.close();} catch(Exception ex) {} 
-		}
+		} 
 		
 		
 

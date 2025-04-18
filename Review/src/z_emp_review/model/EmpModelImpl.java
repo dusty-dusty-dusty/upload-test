@@ -231,4 +231,6 @@ public class EmpModelImpl implements EmpModel {
 	        ps.setInt(1, sabun);
 			  		
 	} 	
-}
+ }
+
+
